@@ -27,33 +27,34 @@ sudo apt-get upgrade
 git clone https://github.com/ecd1012/rpi_road_object_detection.git
 ```
 4.)Change directory to source code:
-
+```
 cd rpi_road_object_detection.git
-
+```
 5.) Install Virual Environment: 
-
+```
 sudo pip3 install virtualenv
-
+```
 6.) Make virtual environment:
-
+```
 python3 -m venv TFLite-venv
-
+```
 7.) Activate Environment:
-
+```
 source TFLite-venv/bin/activate
-
+```
 8.)Install the dependencies:
-
+```
 sudo apt-get -y install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev
 sudo apt-get -y install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
 sudo apt-get -y install libxvidcore-dev libx264-dev
 sudo apt-get -y install qt4-dev-tools libatlas-base-dev
 pip3 install opencv-python==3.4.6.27
 pip3 install tensorflow
-
+```
 9.) Make sure camera modue is enabled:
+```
 sudo raspi-config
-
+```
 10.) Go to interfacing options and make sure the Pi Camera is enabled
 
 Setting Up Hardware
@@ -71,7 +72,10 @@ Help: https://www.youtube.com/watch?v=3TDJ4FmtGgk&ab_channel=O%27Reilly
 Running Detection
 =================
 13.)After all your hardware and software is configured correctly run the following command:
+```
 python TFLite_detection_webcam_loop.py --modeldir=TFLite_model_bbd --output_path processed_images
+```
+Where the --output_path you specify is where you want images saved.
 
 14.) The script will start running and wait for you to press the GPIO input button to start processing video feed from the camera. 
 Once you press the button, the green LED will turn on and the pi will start feeding and processing the video stream through the neural network.
