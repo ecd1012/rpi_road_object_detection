@@ -1,5 +1,5 @@
 # rpi_road_object_detection
-Repository to run object detection on the Raspberry Pi 4. This configuration uses an SSD-Mobile Net model trained on an autonomous driving dataset.
+Repository to run object detection on the Raspberry Pi 4! :D This configuration uses an SSD-Mobile Net model trained on an autonomous driving dataset.
 
 Configuration
 =============
@@ -15,20 +15,21 @@ Other
 
 Setting Up Software
 ====================
-1.)Open a command prompt
+1.) Open a command prompt
 
 2.) Make sure pi is up to date:
-
+```
 sudo apt-get update 
 sudo apt-get upgrade
+```
 
 3.)Clone Repository:
 ```
 git clone https://github.com/ecd1012/rpi_road_object_detection.git
 ```
-4.)Change directory to source code:
+4.) Change directory to source code:
 ```
-cd rpi_road_object_detection.git
+cd rpi_road_object_detection
 ```
 5.) Install Virual Environment: 
 ```
@@ -42,7 +43,7 @@ python3 -m venv TFLite-venv
 ```
 source TFLite-venv/bin/activate
 ```
-8.)Install the dependencies:
+8.) Install the dependencies:
 ```
 sudo apt-get -y install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev
 sudo apt-get -y install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
@@ -59,7 +60,7 @@ sudo raspi-config
 
 Setting Up Hardware
 ===================
-11.) Connect a push button to GPIO pin 17. This will be used as input. Make sure you use a resistor with the LED
+11.) Connect a push button to GPIO pin 17. This will be used as input. Make sure you use a resistor with the LED!
 
 Help: https://www.youtube.com/watch?v=BWYy3qZ315U&ab_channel=O%27Reilly
 
@@ -84,6 +85,8 @@ Processed images will be saved to the '--output_path' you specified over the com
 15.) If you like, make a video out of the images.
 You can do this with gif making software, video making software, or ffmpeg.
 Help: https://stackoverflow.com/questions/24961127/how-to-create-a-video-from-images-with-ffmpeg
+
+16.) Enjoy!! :)
 
 
 
