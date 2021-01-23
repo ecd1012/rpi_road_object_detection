@@ -3,12 +3,12 @@ Repository to run object detection on the Raspberry Pi 4! :D This configuration 
 
 Results
 =======
-![](results.gif)
+<img src="images/result.gif" width="800" height="600">
 
 
 Configuration
 =============
-![](images/rpi_setup.jpg)
+<img src="images/rpi_setup.jpg" width="400" height="300">
 
 Core
 * Raspberry Pi 4 GB
