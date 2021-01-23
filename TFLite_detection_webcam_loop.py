@@ -248,7 +248,7 @@ try:
                 f.append(frame_rate_calc)
 
                 #path = '/home/pi/tflite1/webcam/' + str(datetime.datetime.now()) + ".jpg"
-		path = my_ouput_path + str(datetime.datetime.now()) + ".jpg"
+		 path = my_ouput_path + str(datetime.datetime.now()) + ".jpg"
                 #print(path)
                 #pdb.set_trace()
                 status = cv2.imwrite(path, frame)
