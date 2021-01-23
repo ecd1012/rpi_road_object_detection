@@ -1,5 +1,16 @@
 # rpi_road_object_detection
-Repository to run object detection on a model trained on an autonomous driving dataset.
+Repository to run object detection on the Raspberry Pi 4. This configuration uses an SSD-Mobile Net model trained on an autonomous driving dataset.
+
+Configuration
+=============
+Core
+* Raspberry Pi 4 GB
+* Raspberry Pi 5MP Camera (rev 1.3)
+Other
+* LED and Resistor
+* Small breadboard 
+* GPIO push button
+
 
 Setting Up Software
 ====================
