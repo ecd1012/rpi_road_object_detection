@@ -1,5 +1,6 @@
 # rpi_road_object_detection
 Repository to run object detection on the Raspberry Pi 4! :D This configuration uses an SSD-Mobile Net model trained on an autonomous driving dataset.
+I followed this tutorial to get everything setup: https://github.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/blob/master/Raspberry_Pi_Guide.md
 
 Results
 =======
@@ -18,7 +19,9 @@ Other
 * LED and Resistor
 * Small breadboard 
 * GPIO push button
+* 3.5 Amp USB-C Power Supply
 
+This tissue box setup isn't the greatest, but it's what I used to mount the PI on the dashboard of my car. I then used the USB-C cable plugged into the AC outlet of my car while I drove around to record and process footage.
 
 Setting Up Software
 ====================
@@ -38,7 +41,7 @@ git clone https://github.com/ecd1012/rpi_road_object_detection.git
 ```
 cd rpi_road_object_detection
 ```
-5.) Install Virual Environment: 
+5.) Install Virtual Environment: 
 ```
 sudo pip3 install virtualenv
 ```
@@ -59,7 +62,7 @@ sudo apt-get -y install qt4-dev-tools libatlas-base-dev
 pip3 install opencv-python==3.4.6.27
 pip3 install tensorflow
 ```
-9.) Make sure camera modue is enabled:
+9.) Make sure camera module is enabled:
 ```
 sudo raspi-config
 ```
@@ -75,25 +78,29 @@ Help: https://www.youtube.com/watch?v=BWYy3qZ315U&ab_channel=O%27Reilly
 
 Help: https://www.youtube.com/watch?v=3TDJ4FmtGgk&ab_channel=O%27Reilly
 
+14.) Connect Pi Camera Module to Raspberry Pi.
+Help: https://www.youtube.com/watch?v=0hrF8Wq8SSQ&ab_channel=BINARYUPDATES
+
 
 
 Running Detection
 =================
-13.)After all your hardware and software is configured correctly run the following command:
+15.)After all your hardware and software is configured correctly run the following command:
 ```
 python TFLite_detection_webcam_loop.py --modeldir=TFLite_model_bbd --output_path processed_images
 ```
 Where the --output_path you specify is where you want images saved.
 
-14.) The script will start running and wait for you to press the GPIO input button to start processing video feed from the camera. 
+16.) The script will start running and wait for you to press the GPIO input button to start processing the video feed from the camera. 
 Once you press the button, the green LED will turn on and the pi will start feeding and processing the video stream through the neural network.
 Processed images will be saved to the '--output_path' you specified over the command line.
 
-15.) If you like, make a video out of the images.
+17.) If you like, make a video out of the images.
 You can do this with gif making software, video making software, or ffmpeg.
 Help: https://stackoverflow.com/questions/24961127/how-to-create-a-video-from-images-with-ffmpeg
 
-16.) Enjoy!! :)
+
+18.) Enjoy!! :)
 
 
 
