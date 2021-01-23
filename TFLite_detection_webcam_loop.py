@@ -12,6 +12,7 @@
 # https://github.com/tensorflow/tensorflow/blob/master/tensorflow/lite/examples/python/label_image.py
 #
 # I added my own method of drawing boxes and labels using OpenCV.
+# ^^^^ Credit to Evan for writing this script. I modified it to interface with a GPIO button and LED and also save out images.
 
 # Import packages
 import os
@@ -91,6 +92,8 @@ parser.add_argument('--resolution', help='Desired webcam resolution in WxH. If t
                     default='1280x720')
 parser.add_argument('--edgetpu', help='Use Coral Edge TPU Accelerator to speed up detection',
                     action='store_true')
+parser.add_argument('--output_path, help='Where to save processed imges from pi',
+                    required=True)
 
 args = parser.parse_args()
 
@@ -162,6 +165,9 @@ floating_model = (input_details[0]['dtype'] == np.float32)
 
 input_mean = 127.5
 input_std = 127.5
+
+#make output directory
+my_ouput_path = os.makedirs(output_path, exist_ok=True)
 
 try:
     while True:
@@ -241,7 +247,8 @@ try:
                 frame_rate_calc= 1/time1
                 f.append(frame_rate_calc)
 
-                path = '/home/pi/tflite1/webcam/' + str(datetime.datetime.now()) + ".jpg"
+                #path = '/home/pi/tflite1/webcam/' + str(datetime.datetime.now()) + ".jpg"
+		path = my_ouput_path + str(datetime.datetime.now()) + ".jpg"
                 #print(path)
                 #pdb.set_trace()
                 status = cv2.imwrite(path, frame)
