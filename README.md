@@ -6,6 +6,7 @@ Configuration
 Core
 * Raspberry Pi 4 GB
 * Raspberry Pi 5MP Camera (rev 1.3)
+
 Other
 * LED and Resistor
 * Small breadboard 
@@ -17,25 +18,32 @@ Setting Up Software
 1.)Open a command prompt
 
 2.) Make sure pi is up to date:
+
 sudo apt-get update 
 sudo apt-get upgrade
 
 3.)Clone Repository:
+
 git clone https://github.com/ecd1012/rpi_road_object_detection.git
 
 4.)Change directory to source code:
+
 cd rpi_road_object_detection.git
 
 5.) Install Virual Environment: 
+
 sudo pip3 install virtualenv
 
 6.) Make virtual environment:
+
 python3 -m venv TFLite-venv
 
 7.) Activate Environment:
+
 source TFLite-venv/bin/activate
 
 8.)Install the dependencies:
+
 sudo apt-get -y install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev
 sudo apt-get -y install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
 sudo apt-get -y install libxvidcore-dev libx264-dev
@@ -55,6 +63,7 @@ Setting Up Hardware
 Help: https://www.youtube.com/watch?v=BWYy3qZ315U&ab_channel=O%27Reilly
 
 12.)Connect an LED to GPIO PIN 4. This LED will turn on to indicate when the program is running.
+
 Help: https://www.youtube.com/watch?v=3TDJ4FmtGgk&ab_channel=O%27Reilly
 
 
