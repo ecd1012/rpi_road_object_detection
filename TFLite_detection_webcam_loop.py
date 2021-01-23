@@ -92,7 +92,7 @@ parser.add_argument('--resolution', help='Desired webcam resolution in WxH. If t
                     default='1280x720')
 parser.add_argument('--edgetpu', help='Use Coral Edge TPU Accelerator to speed up detection',
                     action='store_true')
-parser.add_argument('--output_path, help="Where to save processed imges from pi.",
+parser.add_argument('--output_path', help="Where to save processed imges from pi.",
                     required=True)
 
 args = parser.parse_args()
