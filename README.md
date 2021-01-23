@@ -102,6 +102,14 @@ Help: https://stackoverflow.com/questions/24961127/how-to-create-a-video-from-im
 
 18.) Enjoy!! :)
 
+Issues
+======
+1.) If you get an error when trying to run saying: 
+```
+ImportError: No module named cv2
+```
+Try using this tutorial to install and build opencv: https://pimylifeup.com/raspberry-pi-opencv/
+
 
 
 
