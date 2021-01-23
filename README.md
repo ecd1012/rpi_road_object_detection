@@ -23,9 +23,9 @@ sudo apt-get update
 sudo apt-get upgrade
 
 3.)Clone Repository:
-
+'''
 git clone https://github.com/ecd1012/rpi_road_object_detection.git
-
+'''
 4.)Change directory to source code:
 
 cd rpi_road_object_detection.git
