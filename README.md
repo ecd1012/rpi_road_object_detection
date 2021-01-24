@@ -64,7 +64,7 @@ sudo raspi-config
 
 Setting Up Hardware
 ===================
-<img src="images/hardware.jpg" width="400" height="300">
+<img src="images/hardware.jpg" width="400" height="400">
 10.) Connect a push button to GPIO pin 17. This will be used as input. 
 
 Help: https://www.youtube.com/watch?v=BWYy3qZ315U&ab_channel=O%27Reilly
