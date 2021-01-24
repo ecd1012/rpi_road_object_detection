@@ -1,5 +1,6 @@
 # rpi_road_object_detection
 Repository to run object detection on the Raspberry Pi 4! :D This configuration uses an SSD-Mobile Net model trained on an autonomous driving dataset.
+
 I followed this tutorial to get everything setup: https://github.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/blob/master/Raspberry_Pi_Guide.md
 
 Results
@@ -94,6 +95,21 @@ Help: https://stackoverflow.com/questions/24961127/how-to-create-a-video-from-im
 
 
 18.) Enjoy!! :)
+
+Running on Boot
+===============
+19.) If you want to start running the python script on boot, do the following:
+```
+nano ~/.bashrc
+```
+And add the following to the end of your .bashrc
+```
+#Change directories to where you cloned the repo
+cd ~/rpi_road_object_detection
+source TFLite-venv/bin/activate
+python TFLite_detection_webcam_loop.py --modeldir=TFLite_model_bbd --output_path=processed_images
+```
+Then press CTRL+X and Press Y and enter to save.
 
 Issues
 ======
