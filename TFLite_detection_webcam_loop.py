@@ -167,7 +167,7 @@ input_mean = 127.5
 input_std = 127.5
 
 #make output directory
-my_ouput_path = os.makedirs(output_path, exist_ok=True)
+my_ouput_path = os.makedirs(args.output_path, exist_ok=True)
 
 try:
     while True:
