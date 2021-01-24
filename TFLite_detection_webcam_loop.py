@@ -22,6 +22,7 @@ import numpy as np
 import sys
 import pdb
 import time
+import pathlib
 from threading import Thread
 import importlib.util
 import datetime
@@ -50,11 +51,11 @@ class VideoStream:
         # Read first frame from the stream
         (self.grabbed, self.frame) = self.stream.read()
 
-	# Variable to control when the camera is stopped
+    # Variable to control when the camera is stopped
         self.stopped = False
 
     def start(self):
-	# Start the thread that reads frames from the video stream
+    # Start the thread that reads frames from the video stream
         Thread(target=self.update,args=()).start()
         return self
 
@@ -71,11 +72,11 @@ class VideoStream:
             (self.grabbed, self.frame) = self.stream.read()
 
     def read(self):
-	# Return the most recent frame
+    # Return the most recent frame
         return self.frame
 
     def stop(self):
-	# Indicate that the camera and thread should be stopped
+    # Indicate that the camera and thread should be stopped
         self.stopped = True
 
 # Define and parse input arguments
@@ -167,11 +168,15 @@ input_mean = 127.5
 input_std = 127.5
 
 #make output directory
-my_ouput_path = os.makedirs(args.output_path, exist_ok=True)
+#os.makedirs(args.output_path, exist_ok=True)
 
 try:
+    print("Progam started - waiting for button push...")
     while True:
         if not led_on and  not GPIO.input(17):
+            #timestamp an output directory for each capture
+            outdir = pathlib.Path(args.output_path) / time.strftime('%Y-%m-%d_%H-%M-%S-%Z')
+            outdir.mkdir(parents=True)
             GPIO.output(4, True)
             time.sleep(.1)
             led_on = True
@@ -248,22 +253,21 @@ try:
                 f.append(frame_rate_calc)
 
                 #path = '/home/pi/tflite1/webcam/' + str(datetime.datetime.now()) + ".jpg"
-                path = my_ouput_path + str(datetime.datetime.now()) + ".jpg"
-                #print(path)
-                #pdb.set_trace()
+                path = str(outdir) + '/'  + str(datetime.datetime.now()) + ".jpg"
+    
                 status = cv2.imwrite(path, frame)
 
 
                 # Press 'q' to quit
                 if cv2.waitKey(1) == ord('q') or led_on and not GPIO.input(17):
-                    print("ENDING")
+                    print(f"Saved images to: {outdir}")
                     GPIO.output(4, False)
                     led_on = False
                     # Clean up
                     cv2.destroyAllWindows()
                     videostream.stop()
                     time.sleep(2)
-                    print(str(sum(f)/len(f)))
+                    #print(str(sum(f)/len(f)))
                     break
 finally:
     GPIO.output(4, False)
