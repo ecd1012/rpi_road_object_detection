@@ -25,12 +25,9 @@ This tissue box setup isn't the greatest, but it's what I used to mount the PI o
 
 Setting Up Software
 ====================
-1.) Open a command prompt
-
-2.) Make sure pi is up to date:
+1.) Open command prompt and make sure pi is up to date:
 ```
-sudo apt-get update 
-sudo apt-get upgrade
+sudo apt-get update && sudo apt-get upgrade
 ```
 
 3.)Clone Repository:
@@ -41,13 +38,13 @@ git clone https://github.com/ecd1012/rpi_road_object_detection.git
 ```
 cd rpi_road_object_detection
 ```
-5.) Install Virtual Environment: 
+5.) Install virtual environment: 
 ```
 sudo pip3 install virtualenv
 ```
 6.) Make virtual environment:
 ```
-python3 -m venv TFLite-venv
+python3.7 -m venv TFLite-venv
 ```
 7.) Activate Environment:
 ```
@@ -61,12 +58,14 @@ sudo apt-get -y install libxvidcore-dev libx264-dev
 sudo apt-get -y install qt4-dev-tools libatlas-base-dev
 pip3 install opencv-python==3.4.6.27
 pip3 install tensorflow
+
+bash get_py_requirements.sh
 ```
 9.) Make sure camera module is enabled:
 ```
 sudo raspi-config
 ```
-10.) Go to interfacing options and make sure the Pi Camera is enabled
+10.) Go to Intercae Options and make sure the Pi Camera is enabled.
 
 Setting Up Hardware
 ===================
