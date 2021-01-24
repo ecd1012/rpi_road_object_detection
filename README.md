@@ -30,27 +30,27 @@ Setting Up Software
 sudo apt-get update && sudo apt-get upgrade
 ```
 
-3.)Clone Repository:
+2.)Clone Repository:
 ```
 git clone https://github.com/ecd1012/rpi_road_object_detection.git
 ```
-4.) Change directory to source code:
+3.) Change directory to source code:
 ```
 cd rpi_road_object_detection
 ```
-5.) Install virtual environment: 
+4.) Install virtual environment: 
 ```
 sudo pip3 install virtualenv
 ```
-6.) Make virtual environment:
+5.) Make virtual environment:
 ```
 python3.7 -m venv TFLite-venv
 ```
-7.) Activate Environment:
+6.) Activate Environment:
 ```
 source TFLite-venv/bin/activate
 ```
-8.) Install the dependencies:
+7.) Install the dependencies:
 ```
 sudo apt-get -y install libjpeg-dev libtiff5-dev libjasper-dev libpng12-dev
 sudo apt-get -y install libavcodec-dev libavformat-dev libswscale-dev libv4l-dev
@@ -61,23 +61,23 @@ pip3 install tensorflow
 
 bash get_py_requirements.sh
 ```
-9.) Make sure camera module is enabled:
+8.) Make sure camera module is enabled:
 ```
 sudo raspi-config
 ```
-10.) Go to Intercae Options and make sure the Pi Camera is enabled.
+9.) Go to Intercae Options and make sure the Pi Camera is enabled.
 
 Setting Up Hardware
 ===================
-11.) Connect a push button to GPIO pin 17. This will be used as input. Make sure you use a resistor with the LED!
+10.) Connect a push button to GPIO pin 17. This will be used as input. 
 
 Help: https://www.youtube.com/watch?v=BWYy3qZ315U&ab_channel=O%27Reilly
 
-12.)Connect an LED to GPIO PIN 4. This LED will turn on to indicate when the program is running.
+11.)Connect an LED to GPIO PIN 4. This LED will turn on to indicate when the program is running. Make sure you use a resistor with the LED!
 
 Help: https://www.youtube.com/watch?v=3TDJ4FmtGgk&ab_channel=O%27Reilly
 
-14.) Connect Pi Camera Module to Raspberry Pi.
+12.) Connect Pi Camera Module to Raspberry Pi.
 Help: https://www.youtube.com/watch?v=0hrF8Wq8SSQ&ab_channel=BINARYUPDATES
 
 
@@ -86,7 +86,7 @@ Running Detection
 =================
 15.)After all your hardware and software is configured correctly run the following command:
 ```
-python TFLite_detection_webcam_loop.py --modeldir=TFLite_model_bbd --output_path processed_images
+python TFLite_detection_webcam_loop.py --modeldir=TFLite_model_bbd --output_path=processed_images
 ```
 Where the --output_path you specify is where you want images saved.
 
