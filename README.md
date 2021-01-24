@@ -1,6 +1,8 @@
 # rpi_road_object_detection
 Repository to run object detection on the Raspberry Pi 4! :D This configuration uses an SSD-Mobile Net model trained on an autonomous driving dataset.
 
+YouTube Turorial: https://youtu.be/Zfmo3bMycUg
+
 I followed this tutorial to get everything setup: https://github.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/blob/master/Raspberry_Pi_Guide.md
 
 Results
