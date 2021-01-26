@@ -1,14 +1,28 @@
 # rpi_road_object_detection
-Repository to run object detection on the Raspberry Pi 4! :D This configuration uses an SSD-Mobile Net model trained on an autonomous driving dataset.
 
-YouTube Turorial: https://youtu.be/Zfmo3bMycUg
+Decription
+==========
+Code and tutorial to configure the necessary hardware and software for running object detection on the Raspberry Pi 4!
+Details of Nerual Network Model for Object Detection
+*Framework: TensorFlow Lite
+*Network: SSD MobileNet-V2
+*Training Datset:Berkely Deep Drive (BBD100K)
 
-I followed this tutorial to get everything setup: https://github.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/blob/master/Raspberry_Pi_Guide.md
+
+Motivation for the Project
+========================
+The goal of this project was to train a neutral network to detect things on the road that an autonomous driving vehicle would see (eg. bus, traffic light, traffic sign, person, bike, truck, motor, car, train, rider). Then to test the trained network on lightweight hardware (i.e. Raspberry PI 4) to see how if performs in terms of processing speed and detection accuracy.
+
+
+Additional Resources
+===================
+*YouTube Turorial For Configuring Software and Hardware for the project: https://youtu.be/Zfmo3bMycUg
+*I followed this tutorial to get everything setup: https://github.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/blob/master/Raspberry_Pi_Guide.md
+*Explanation of Machine Learning/Deep Learning/Object Detection: https://www.youtube.com/watch?v=pIciURImE04&t=138s&ab_channel=bitsNblobsElectronics
 
 Results
 =======
 <img src="images/result.gif" width="800" height="600">
-
 
 Configuration
 =============
