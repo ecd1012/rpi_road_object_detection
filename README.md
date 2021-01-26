@@ -4,31 +4,31 @@ Description of Repository
 =========================
 This repository contains code and instructions to configure the necessary hardware and software for running autonomous driving object detection on the Raspberry Pi 4!
 
-Details of Software and Nerual Network Model for Object Detection:
-* Languag: Python
+Details of Software and Neural Network Model for Object Detection:
+* Language: Python
 * Framework: TensorFlow Lite
 * Network: SSD MobileNet-V2
-* Training Datset:Berkely Deep Drive (BBD100K)
+* Training Dataset:Berkely Deep Drive (BBD100K)
 
 
-Motivation for the Project
+The motivation for the Project
 ========================
-The goal of this project was to train a neutral network to detect things on the road that an autonomous driving vehicle would see (eg. bus, traffic light, traffic sign, person, bike, truck, motor, car, train, rider). 
-Then to test the trained network on lightweight hardware (i.e. Raspberry PI 4) to see how if performs in terms of processing speed and detection accuracy.
+The goal of this project was to train a neural network to detect things on the road that an autonomous driving vehicle would see (eg. bus, traffic light, traffic sign, person, bike, truck, motor, car, train, rider). 
+Then to test the trained network on lightweight hardware (i.e. Raspberry PI 4) to see how it performs in terms of processing speed and detection accuracy.
 
 
 Additional Resources
 ===================
 * **YouTube Turorial For This Repository**: https://youtu.be/Zfmo3bMycUg
-* **I followed this tutorial to get everything setup**: https://github.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/blob/master/Raspberry_Pi_Guide.md
+* **Video Tutorial Followed to Source The Majority of Code and Setup**: https://github.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/blob/master/Raspberry_Pi_Guide.md
 * **Explanation of Machine Learning/Deep Learning/Object Detection**: https://www.youtube.com/watch?v=pIciURImE04&t=138s&ab_channel=bitsNblobsElectronics
 
 Results
 =======
 <img src="images/result.gif" width="800" height="600">
 
-Configuration
-=============
+Vehicle Testing Configuration
+=============================
 <img src="images/rpi_setup.jpg" width="400" height="300">
 
 Core
@@ -75,7 +75,7 @@ source TFLite-venv/bin/activate
 ```
 bash get_py_requirements.sh
 ```
-8.) Make sure camera module is enabled:
+8.) Make sure the camera module is enabled:
 ```
 sudo raspi-config
 ```
@@ -138,6 +138,12 @@ Issues
 ImportError: No module named cv2
 ```
 Try using this tutorial to install and build opencv: https://pimylifeup.com/raspberry-pi-opencv/
+
+
+
+
+
+
 
 
 
