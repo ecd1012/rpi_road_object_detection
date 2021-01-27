@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#Code from EdjeElectronics: https://github.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/blob/master/Raspberry_Pi_Guide.md
+
 #Get GPIO package
 pip3 install RPi.GPIO
 
