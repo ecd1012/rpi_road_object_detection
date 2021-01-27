@@ -20,8 +20,13 @@ Then to test the trained network on lightweight hardware (i.e. Raspberry PI 4) t
 Additional Resources
 ===================
 * **YouTube Turorial For This Repository**: https://youtu.be/Zfmo3bMycUg
-* **Video Tutorial Followed to Source The Majority of Code and Setup**: https://github.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/blob/master/Raspberry_Pi_Guide.md
 * **Explanation of Machine Learning/Deep Learning/Object Detection**: https://www.youtube.com/watch?v=pIciURImE04&t=138s&ab_channel=bitsNblobsElectronics
+
+Source
+=======
+**Reference for Source Code for the Project**: https://github.com/EdjeElectronics/TensorFlow-Lite-Object-Detection-on-Android-and-Raspberry-Pi/blob/master/Raspberry_Pi_Guide.md
+
+Special thanks to Evan from EdjeElectronics for the instructions and the majority of the code used in this project! :)
 
 Results
 =======
