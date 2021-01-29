@@ -20,6 +20,7 @@ Then to test the trained network on lightweight hardware (i.e. Raspberry PI 4) t
 Additional Resources
 ===================
 * **YouTube Turorial For This Repository**: https://youtu.be/Zfmo3bMycUg
+* **Post Describing the Training Procedure**: https://ecd1012.medium.com/autonomous-driving-object-detection-on-the-raspberry-pi-4-175bba51d5b4
 * **Explanation of Machine Learning/Deep Learning/Object Detection**: https://www.youtube.com/watch?v=pIciURImE04&t=138s&ab_channel=bitsNblobsElectronics
 
 Source
