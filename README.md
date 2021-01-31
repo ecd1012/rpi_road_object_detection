@@ -56,13 +56,13 @@ Setting Up Software
 ```
 git clone https://github.com/ecd1012/rpi_road_object_detection.git
 ````
-2.) Open command prompt and make sure pi is up to date:
-```
-sudo apt-get update && sudo apt-get upgrade
-```
-3.) Change directory to source code:
+2.) Change directory to source code:
 ```
 cd rpi_road_object_detection
+```
+3.) Open command prompt and make sure pi is up to date:
+```
+sudo apt-get update && sudo apt-get upgrade
 ```
 4.) Install virtual environment: 
 ```
