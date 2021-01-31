@@ -52,14 +52,13 @@ This tissue box setup isn't the greatest, but it's what I used to mount the PI o
 
 Setting Up Software
 ====================
-1.) Open command prompt and make sure pi is up to date:
-```
-sudo apt-get update && sudo apt-get upgrade
-```
-
-2.) Clone Repository:
+1.) Clone Repository:
 ```
 git clone https://github.com/ecd1012/rpi_road_object_detection.git
+````
+2.) Open command prompt and make sure pi is up to date:
+```
+sudo apt-get update && sudo apt-get upgrade
 ```
 3.) Change directory to source code:
 ```
