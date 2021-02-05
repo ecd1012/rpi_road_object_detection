@@ -50,6 +50,16 @@ Other
 
 This tissue box setup isn't the greatest, but it's what I used to mount the PI on the dashboard of my car. I then used the USB-C cable plugged into the AC outlet of my car while I drove around to record and process footage.
 
+Issues
+======
+1.) If you get an error when trying to run the program showing the following: 
+```
+ImportError: No module named cv2
+```
+Try using this tutorial to install and build opencv: https://pimylifeup.com/raspberry-pi-opencv/
+The software setup steps should install OpenCV, but sometimes installing it on the Raspberry Pi can be finicky.
+
+
 Setting Up Software
 ====================
 1.) Clone Repository:
@@ -136,13 +146,7 @@ python TFLite_detection_webcam_loop.py --modeldir=TFLite_model_bbd --output_path
 ```
 Then press CTRL+X and Press Y and enter to save.
 
-Issues
-======
-1.) If you get an error when trying to run saying: 
-```
-ImportError: No module named cv2
-```
-Try using this tutorial to install and build opencv: https://pimylifeup.com/raspberry-pi-opencv/
+
 
 
 
