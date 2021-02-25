@@ -100,12 +100,12 @@ Setting Up Hardware
 ===================
 <img src="images/hardware.jpg" width="300" height="400">
 10.) Connect a push button to GPIO pin 17. This will be used as input. 
+Help: https://www.youtube.com/watch?v=3TDJ4FmtGgk&ab_channel=O%27Reilly
 
-Help: https://www.youtube.com/watch?v=BWYy3qZ315U&ab_channel=O%27Reilly
 
 11.) Connect an LED to GPIO PIN 4. This LED will turn on to indicate when the program is running. Make sure you use a resistor with the LED!
+Help: https://www.youtube.com/watch?v=BWYy3qZ315U&ab_channel=O%27Reilly
 
-Help: https://www.youtube.com/watch?v=3TDJ4FmtGgk&ab_channel=O%27Reilly
 
 12.) Connect Pi Camera Module to Raspberry Pi.
 Help: https://www.youtube.com/watch?v=0hrF8Wq8SSQ&ab_channel=BINARYUPDATES
