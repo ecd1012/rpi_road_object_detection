@@ -94,7 +94,7 @@ bash get_py_requirements.sh
 ```
 sudo raspi-config
 ```
-9.) Go to Intercae Options and make sure the Pi Camera is enabled.
+9.) Go to Interface Options and make sure the Pi Camera is enabled.
 
 Setting Up Hardware
 ===================
